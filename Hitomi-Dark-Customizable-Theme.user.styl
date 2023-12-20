@@ -1,0 +1,213 @@
+/* ==UserStyle==
+@name           Hitomi Dark/Customizable Theme
+@namespace      github.com/Knighto00/Stylus_Hitomi-Dark-Customizable-Theme
+@description    A modest dark/customizable theme for hitomi.la website. You are able to set the colors you like the most and adapt it to OLED screen = Less battery consumption.
+@author			Knighto00 ->> (https://github.com/Knighto00)
+@homepageURL	https://github.com/Knighto00/Stylus_Hitomi-Dark-Customizable-Theme
+@supportURL		https://github.com/Knighto00/Stylus_Hitomi-Dark-Customizable-Theme/issues
+@version        1.0.1
+@license		GNU GPLv3
+@preprocessor	stylus
+
+@var checkbox bannerDisable 		"Disable banner image" 									1
+
+@var color    boxShadowContainer    "Container border glow color"                           #a30000
+@var color    searchInput   		"Search input text color"   	  	 					#5ebf00
+@var color    searchSuggest 		"Search suggestions text color"   	 					#5ebf00
+@var color    searchSugTotal		"Total number of itens text color"  					#cccccc
+@var color    searchAutoComplete    "Search autocomplete suggestions text color"            #cccccc
+
+@var color    tagsColor             "Tags color"                                            #ffffff
+@var color    tagsBkgColor          "Tags background color"                                 #252525
+@var color    tagsColorOnHover      "Tags color on hover"                                   #6ad900
+@var color    tagsBkgColorOnHover   "Tags background color on hover"                        #373737
+
+@var color    searchButtonColor 	"Search button color"   			 					#5ebf00
+@var color    searchButtonBkg   	"Search button background color"   	 					#242424
+@var color    searchButtonHColor	"Search button color on hover"       					#6ad900
+@var color    searchButtonHBkg  	"Search button background color on hover"   			#403f3f
+
+@var color    titles  				"Page title text color"   							    #bdbdbd
+
+@var color    indexNumber      		"Selected page number color"   							#5ebf00
+@var color    nextIndexNumber  		"Next/Previous page number color"           			#bdbdbd
+@var color 	  nextIndexNumberH		"Next/Previous page number color on hover"  			#fbfbfb
+
+@var color    bkgColor  			"Background Color"    			     					#131111
+==/UserStyle== */
+@-moz-document domain("hitomi.la") {
+    body {
+        background-color: bkgColor !important;
+    }
+
+    .container {
+        background-color: bkgColor !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: none !important;
+        box-shadow: 0 0 10px boxShadowContainer !important;
+    }
+
+    /* Navbar - Head*/
+    nav {
+        if (bannerDisable) {
+            background-color: bkgColor !important;
+        }
+    }
+
+    .navbar {
+        if (bannerDisable) {
+            background-color: bkgColor !important;
+            background-image: none !important;
+        }
+    }
+
+    nav ul li a:hover {
+        color: tagsColorOnHover !important;
+    }
+
+    #lang-drop {
+        background-color: bkgColor !important;
+    }
+
+    #lang-list a:hover {
+        color: tagsColorOnHover !important;
+    }
+
+    /* search.css */
+    #query-input {
+        background-color: bkgColor !important;
+        color: searchInput !important;
+    }
+
+    #search-suggestions li {
+        background-color: bkgColor !important;
+        color: searchSuggest !important;
+    }
+
+    #search-suggestions li a {
+        background-color: bkgColor !important;
+        color: searchAutoComplete !important;
+    }
+
+    .search-ns {
+        color: searchSugTotal !important;
+    }
+
+    .search-suggestion strong {
+        color: searchSuggest !important;
+    }
+
+    .search-suggestion_total {
+        color: searchSugTotal !important;
+    }
+
+    #search-button {
+        background-color: searchButtonBkg !important;
+        color: searchButtonColor !important;
+    }
+
+    #search-button:hover {
+        background-color: searchButtonHBkg !important;
+    }
+
+    .top-content {
+        background-color: bkgColor !important;
+    }
+
+    .list-title {
+        background-image: none !important;
+        background-color: bkgColor !important;
+        border: none !important;
+    }
+
+    h3 {
+        color: titles !important;
+    }
+
+    #orderbydropdown {
+        background-color: bkgColor !important;
+        color: titles !important;
+    }
+
+    #loader-content {
+        background-color: bkgColor !important;
+    }
+
+    /* Content */
+    .gallery-content {
+        background-color: bkgColor !important;
+    }
+
+    .page-container {
+        background-color: bkgColor !important;
+    }
+
+    .page-container ul li {
+        color: indexNumber !important;
+    }
+
+    .page-container ul li a {
+        color: nextIndexNumber !important;
+    }
+
+    .page-container ul li a:hover {
+        color: nextIndexNumberH !important;
+        background-color: bkgColor !important;
+    }
+
+    .dj,
+    .imageset,
+    .cg,
+    .acg,
+    .manga {
+        background-color: bkgColor !important;
+    }
+
+    .tags li a, .relatedtags li a {
+        color: tagsColor !important;
+        background-color: tagsBkgColor !important;
+    }
+
+    .tags li a:hover, .relatedtags li a:hover {
+        color: tagsColorOnHover !important;
+        background-color: tagsBkgColorOnHover !important;
+    }
+
+    .page-content {
+        background-color: bkgColor !important;
+    }
+
+    .page-content ul li a:hover {
+        color: tagsColorOnHover !important;
+    }
+
+    .posts a:hover {
+        color: tagsColorOnHover !important;
+    }
+
+    .content {
+        background-color: bkgColor !important;
+    }
+
+    .thumbnail-list {
+        background-color: bkgColor !important;
+    }
+
+    /* Footer */
+    #nozomi-link {
+        background-color: bkgColor !important;
+    }
+
+    .donate {
+        if (bannerDisable) {
+            background-image: none !important;
+            background-color: bkgColor !important;
+        }
+    }
+}
+	/*
+	Made with love by Knighto00 <3
+	I hope you like it! :D
+	Enjoy!
+	*/
